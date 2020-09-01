@@ -23,14 +23,15 @@ pannellum.viewer('panorama', {
         "author": "Pension Laßhofer Appartment 10",
         "sceneFadeDuration": 1000,
         "autoLoad": true,
-        "autoRotate": -2
+        "autoRotate": -2,
+        "autoRotateInactivityDelay"; 5,
     },
 
     "scenes": {
         "entrance": {
             "title": "Eingang",
             "hfov": 130,
-            "pitch": -3,
+            "pitch": 0,
             "yaw": 117,
             "type": "equirectangular",
             "panorama": "IMG_20200831_105936_00_434.jpg",
@@ -66,7 +67,7 @@ pannellum.viewer('panorama', {
             "panorama": "IMG_20200831_105516_00_433.jpg",
             "hotSpots": [
                 {
-                    "pitch": -0.6,
+                    "pitch": 0.6,
                     "yaw": 250.0,
                     "type": "scene",
                     "text": "Eingang",
@@ -75,7 +76,7 @@ pannellum.viewer('panorama', {
                     "targetPitch": 2
                 },
                 {
-                    "pitch": -0.6,
+                    "pitch": 0.6,
                     "yaw": 100.0,
                     "type": "scene",
                     "text": "Schlafzimmer 2",
@@ -84,7 +85,7 @@ pannellum.viewer('panorama', {
                     "targetPitch": 2
                 },
                 {
-                    "pitch": -0.6,
+                    "pitch": 0.6,
                     "yaw": 70.0,
                     "type": "scene",
                     "text": "Balkon",
@@ -102,7 +103,7 @@ pannellum.viewer('panorama', {
             "panorama": "IMG_20200831_105324_00_432.jpg",
             "hotSpots": [
                 {
-                    "pitch": -0.6,
+                    "pitch": 0.6,
                     "yaw": 20.0,
                     "type": "scene",
                     "text": "Küche",
@@ -120,7 +121,7 @@ pannellum.viewer('panorama', {
             "panorama": "IMG_20200831_105029_00_429.jpg",
             "hotSpots": [
                 {
-                    "pitch": -0.6,
+                    "pitch": 0.6,
                     "yaw": 270.0,
                     "type": "scene",
                     "text": "Eingang",
@@ -139,7 +140,7 @@ pannellum.viewer('panorama', {
             "hotSpots": [
                 {
                     "pitch": -0.6,
-                    "yaw": 250.0,
+                    "yaw": 255.0,
                     "type": "scene",
                     "text": "Schlafzimmer 2",
                     "sceneId": "bedroom2",
@@ -175,7 +176,7 @@ pannellum.viewer('panorama', {
             "hotSpots": [
                 {
                     "pitch": -0.6,
-                    "yaw": 20.0,
+                    "yaw": 40.0,
                     "type": "scene",
                     "text": "Küche",
                     "sceneId": "kitchen",
