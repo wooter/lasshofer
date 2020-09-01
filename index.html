@@ -1,19 +1,226 @@
+<!DOCTYPE HTML>
 <html>
 <head>
-<title>Pension Laßhofer</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css"/>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+    <style>
+    #panorama {
+        width: 600px;
+        height: 400px;
+    }
+    </style>
 </head>
 <body>
-<h1>Pension Laßhofer</h1>
-<h2>Appartment 10</h2>
-<ul>
-  <li><a href="https://cdn.pannellum.org/2.5/pannellum.htm#panorama=https://wooter.github.io/lasshofer/IMG_20200831_105936_00_434.jpg">Eingang</a></li>
-  <li><a href="kueche.html">Küche</a></li>
-  <li><a href="kommode.html">Kommode</a></li>
-  <li><a href="badezimmer1.html">Badezimmer 1</a></li>
-  <li><a href="schlafzimmer1.html">Schlafzimmer 1</a></li>
-  <li><a href="schlafzimmer2.html">Schlafzimmer 2</a></li>
-  <li><a href="badezimmer2.html">Badezimmer 2</a></li>
-  <li><a href="balkon.html">Balkon</a></li>
 
-</ul>
+<div id="panorama"></div>
+<script>
+pannellum.viewer('panorama', {   
+    "default": {
+        "firstScene": "entrance",
+        "author": "Pension Laßhofer Appartment 10",
+        "sceneFadeDuration": 1000
+    },
+
+    "scenes": {
+        "entrance": {
+            "title": "Eingang",
+            "hfov": 110,
+            "pitch": -3,
+            "yaw": 117,
+            "type": "equirectangular",
+            "panorama": "IMG_20200831_105936_00_434.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -2.1,
+                    "yaw": 132.9,
+                    "type": "scene",
+                    "text": "Küche",
+                    "sceneId": "kitchen"
+                }
+                {
+                    "pitch": -2.1,
+                    "yaw": 200.0,
+                    "type": "scene",
+                    "text": "Komode",
+                    "sceneId": "dressing"
+                }
+                {
+                    "pitch": -2.1,
+                    "yaw": 300.0,
+                    "type": "scene",
+                    "text": "Badezimmer 1",
+                    "sceneId": "bathroom1"
+                }
+            ]
+        },
+        "kitchen": {
+            "title": "Küche",
+            "hfov": 110,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "IMG_20200831_105516_00_433.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 37.1,
+                    "type": "scene",
+                    "text": "Eingang",
+                    "sceneId": "entrance",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+                {
+                    "pitch": -0.6,
+                    "yaw": 137.1,
+                    "type": "scene",
+                    "text": "Schlafzimmer 2",
+                    "sceneId": "bedroom2",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+                {
+                    "pitch": -0.6,
+                    "yaw": 237.1,
+                    "type": "scene",
+                    "text": "Balkon",
+                    "sceneId": "balcony",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        }
+        "balcony": {
+            "title": "Balkon",
+            "hfov": 110,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "IMG_20200831_105324_00_432.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 37.1,
+                    "type": "scene",
+                    "text": "Küche",
+                    "sceneId": "kitchen",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        }
+        "bathroom1": {
+            "title": "Badezimmer 1",
+            "hfov": 110,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "IMG_20200831_105029_00_429.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 37.1,
+                    "type": "scene",
+                    "text": "Eingang",
+                    "sceneId": "entrance",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        }
+        "bathroom2": {
+            "title": "Badezimmer 1",
+            "hfov": 110,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "IMG_20200831_105125_00_430.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 37.1,
+                    "type": "scene",
+                    "text": "Schlafzimmer 2",
+                    "sceneId": "bedroom2",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        }
+        "bedroom1": {
+            "title": "Schlafzimmer 1",
+            "hfov": 110,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "IMG_20200831_104928_00_427.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 37.1,
+                    "type": "scene",
+                    "text": "Komode",
+                    "sceneId": "dressing",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        }
+        "bedroom2": {
+            "title": "Schlafzimmer 2",
+            "hfov": 110,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "IMG_20200831_105213_00_431.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 37.1,
+                    "type": "scene",
+                    "text": "Küche",
+                    "sceneId": "kitchen",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+                {
+                    "pitch": -0.6,
+                    "yaw": 137.1,
+                    "type": "scene",
+                    "text": "Badezimmer 2",
+                    "sceneId": "bathroom2",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        }
+        "dressing": {
+            "title": "Komode",
+            "hfov": 110,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "IMG_20200831_105001_00_428.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 37.1,
+                    "type": "scene",
+                    "text": "Eingang",
+                    "sceneId": "entrance",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+                {
+                    "pitch": -0.6,
+                    "yaw": 137.1,
+                    "type": "scene",
+                    "text": "Schlafzimmer 1",
+                    "sceneId": "bedroom1",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        }
+    }
+});
+</script>
+
 </body>
+</html>
