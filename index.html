@@ -18,11 +18,12 @@
 <div id="panorama"></div>
 <script>
 pannellum.viewer('panorama', {   
-  "autoLoad": true,
     "default": {
         "firstScene": "entrance",
         "author": "Pension Laßhofer Appartment 10",
-        "sceneFadeDuration": 1000
+        "sceneFadeDuration": 1000,
+        "autoLoad": true,
+        "autoRotate": -2
     },
 
     "scenes": {
@@ -149,7 +150,7 @@ pannellum.viewer('panorama', {
         },
         "bedroom1": {
             "title": "Schlafzimmer 1",
-            "hfov": 110,
+            "hfov": 130,
             "yaw": 5,
             "type": "equirectangular",
             "panorama": "IMG_20200831_104928_00_427.jpg",
