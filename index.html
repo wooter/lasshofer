@@ -38,7 +38,7 @@ pannellum.viewer('panorama', {
         "sceneFadeDuration": 1000,
         "autoLoad": true,
         "autoRotate": -2,
-        "autoRotateInactivityDelay": 5,
+        "autoRotateInactivityDelay": 5000,
         "orientationOnByDefault": true
     },
 
@@ -46,8 +46,8 @@ pannellum.viewer('panorama', {
         "entrance": {
             "title": "Eingang",
             "hfov": 130,
-            "pitch": 0,
-            "yaw": 117,
+            "pitch": -10,
+            "yaw": 300,
             "type": "equirectangular",
             "panorama": "IMG_20200831_105936_00_434.jpg",
             "hotSpots": [
@@ -77,6 +77,7 @@ pannellum.viewer('panorama', {
         "kitchen": {
             "title": "Küche",
             "hfov": 130,
+            "pitch": -10,
             "yaw": 5,
             "type": "equirectangular",
             "panorama": "IMG_20200831_105516_00_433.jpg",
