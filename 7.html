@@ -54,10 +54,17 @@ pannellum.viewer('panorama', {
             "hotSpots": [
                 {
                     "pitch": 0,
-                    "yaw": 0.0,
+                    "yaw": 90,
                     "type": "scene",
                     "text": "Badezimmer",
                     "sceneId": "bathroom"
+                },
+                {
+                    "pitch": 0,
+                    "yaw": -20,
+                    "type": "scene",
+                    "text": "Balkone",
+                    "sceneId": "balcony"
                 }
             ]
         },
@@ -68,6 +75,25 @@ pannellum.viewer('panorama', {
             "pitch": -10,
             "type": "equirectangular",
             "panorama": "images/IMG_20200831_105029_00_429.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -10,
+                    "yaw": 270.0,
+                    "type": "scene",
+                    "text": "Zimmer",
+                    "sceneId": "zimmer",
+                    "targetYaw": -23,
+                    "targetPitch": -10
+                }
+            ]
+        }
+        "balcony": {
+            "title": "Balkone",
+            "hfov": 130,
+            "yaw": 5,
+            "pitch": -10,
+            "type": "equirectangular",
+            "panorama": "images/IMG_20201004_201543_189.jpeg",
             "hotSpots": [
                 {
                     "pitch": -10,
