@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pension Laßhofer: Zimmer 7</title>
+    <link rel="stylesheet" href="js/pannellum/pannellum.css"/>
+    <script type="text/javascript" src="js/pannellum/libpannellum.js"></script>
+    <script type="text/javascript" src="js/pannellum/pannellum.js"></script>
+    <style>
+      html, body {
+        height: 100%;
+        padding: 0px;
+        margin: 0px;
+      }
+    #panorama {
+        width: 100%;
+        height: 100vh;
+        padding: 0px;
+        margin: 0px;
+        overflow: hidden;
+        position: absolute;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   left: 0;
+    }
+  
+    </style>
+</head>
+<body>
+
+<div id="panorama"></div>
+<script>
+pannellum.viewer('panorama', {   
+    "default": {
+        "firstScene": "entrance",
+        "author": "Pension Laßhofer Appartment 7",
+        "sceneFadeDuration": 1000,
+        "autoLoad": true,
+        "autoRotate": -2,
+        "autoRotateInactivityDelay": 5000,
+        "orientationOnByDefault": true
+    },
+
+    "scenes": {
+        "zimmer": {
+            "title": "Zimmer",
+            "hfov": 130,
+            "pitch": -10,
+            "yaw": 300,
+            "type": "equirectangular",
+            "panorama": "images/IMG_20201004_201535_800.jpeg",
+            "hotSpots": [
+                {
+                    "pitch": 0,
+                    "yaw": 0.0,
+                    "type": "scene",
+                    "text": "Badezimmer",
+                    "sceneId": "bathroom"
+                }
+            ]
+        },
+        "bathroom": {
+            "title": "Badezimmer",
+            "hfov": 130,
+            "yaw": 5,
+            "pitch": -10,
+            "type": "equirectangular",
+            "panorama": "images/IMG_20200831_105029_00_429.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -10,
+                    "yaw": 270.0,
+                    "type": "scene",
+                    "text": "Zimmer",
+                    "sceneId": "zimmer",
+                    "targetYaw": -23,
+                    "targetPitch": -10
+                }
+            ]
+        }
+    }
+});
+</script>
+
+</body>
+</html>
