@@ -1,0 +1,155 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pension Laßhofer: Studio 6</title>
+    <link rel="stylesheet" href="js/pannellum/pannellum.css"/>
+    <script type="text/javascript" src="js/pannellum/libpannellum.js"></script>
+    <script type="text/javascript" src="js/pannellum/pannellum.js"></script>
+    <style>
+      html, body {
+        height: 100%;
+        padding: 0px;
+        margin: 0px;
+      }
+    #panorama {
+        width: 100%;
+        height: 100vh;
+        padding: 0px;
+        margin: 0px;
+        overflow: hidden;
+        position: absolute;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   left: 0;
+    }
+  
+    </style>
+</head>
+<body>
+
+<div id="panorama"></div>
+<script>
+pannellum.viewer('panorama', {   
+    "default": {
+        "firstScene": "studio",
+        "author": "Pension Laßhofer Studio 6",
+        "sceneFadeDuration": 1000,
+        "autoLoad": true,
+        "autoRotate": -2,
+        "autoRotateInactivityDelay": 5000,
+        "orientationOnByDefault": true
+    },
+
+    "scenes": {
+        "studio": {
+            "title": "Studio",
+            "hfov": 130,
+            "pitch": -10,
+            "yaw": 160,
+            "type": "equirectangular",
+            "panorama": "images/IMG_20200802_105159_00_421.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -5,
+                    "yaw": -50,
+                    "type": "scene",
+                    "text": "Badezimmer",
+                    "sceneId": "bathroom"
+                },
+                {
+                    "pitch": -5,
+                    "yaw": -76,
+                    "type": "scene",
+                    "text": "Küche",
+                    "sceneId": "kitchen"
+                },
+                {
+                    "pitch": -5,
+                    "yaw": -85,
+                    "type": "scene",
+                    "text": "Balkone",
+                    "sceneId": "balcony"
+                }            ]
+        },
+        "bathroom": {
+            "title": "Badezimmer",
+            "hfov": 130,
+            "yaw": 5,
+            "pitch": -10,
+            "type": "equirectangular",
+            "panorama": "images/IMG_20200802_104521_00_418.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -10,
+                    "yaw": 0.0,
+                    "type": "scene",
+                    "text": "Studio",
+                    "sceneId": "studio",
+                    "targetYaw": 160,
+                    "targetPitch": -10
+                }
+            ]
+        },
+        "kitchen": {
+            "title": "Küche",
+            "hfov": 130,
+            "yaw": 5,
+            "pitch": -10,
+            "type": "equirectangular",
+            "panorama": "images/IMG_20200802_105133_00_420.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -10,
+                    "yaw": 110,
+                    "type": "scene",
+                    "text": "Studio",
+                    "sceneId": "studio",
+                    "targetYaw": 0,
+                    "targetPitch": -10
+                },
+                {
+                    "pitch": -10,
+                    "yaw": -76,
+                    "type": "scene",
+                    "text": "Balkone",
+                    "sceneId": "balcony",
+                    "targetYaw": 0,
+                    "targetPitch": -10
+                },
+                {
+                    "pitch": -5,
+                    "yaw": 65,
+                    "type": "scene",
+                    "text": "Badezimmer",
+                    "sceneId": "bathroom"
+                }            
+            ]
+        },        
+        "balcony": {
+            "title": "Balkone",
+            "hfov": 130,
+            "yaw": 150,
+            "pitch": -5,
+            "type": "equirectangular",
+            "panorama": "images/IMG_20200802_090939_00_417.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -5,
+                    "yaw": 146,
+                    "type": "scene",
+                    "text": "Küche",
+                    "sceneId": "kitchen",
+                    "targetYaw": -23,
+                    "targetPitch": -10
+                }
+            ]
+        }
+    }
+});
+</script>
+
+</body>
+</html>
